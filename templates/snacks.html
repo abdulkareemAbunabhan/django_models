@@ -1,11 +1,7 @@
 {% extends 'base.html'%}
 
 {% block content%}
-    <!-- <h1 >Snacks</h1> -->
-    <!-- <h2>{{Snacks}}</h2> -->
     {% for snack in Snacks %}
-        <h6>{{snack.name}}</h6>
-        <h6>{{snack.purchaser}}</h6>
-        <h6>{{snack.description}}</h6>
+        <h3 align=center><a href="{% url 'snack_detail' snack.pk%}">Name: {{snack.name}}</a></h3>
     {% endfor %}
 {% endblock content%}
